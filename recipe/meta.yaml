@@ -43,7 +43,7 @@ test:
     - tskit --help
 
 about:
-  home: http://github.com/tskit/tskit
+  home: http://github.com/tskit-dev/tskit
   license: MIT
   license_family: MIT
   license_file: LICENSE
