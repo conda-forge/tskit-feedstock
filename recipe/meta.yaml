@@ -1,6 +1,6 @@
 {% set name = "tskit" %}
-{% set version = "0.2.3" %}
-{% set sha256 = "8f7e02fff6bb974864714df5e913cae1a8472018acc4a07e9df2c93523b991a1" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "d9db1d9eeabd30c3475e2738f7e610c07c6fe2efe219a86fa390f95246dcee67" %}
 
 package:
   name: {{ name|lower }}
@@ -30,7 +30,6 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - six
     - h5py
     - svgwrite
     - jsonschema
