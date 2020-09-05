@@ -1,6 +1,6 @@
 {% set name = "tskit" %}
-{% set version = "0.3.0" %}
-{% set sha256 = "d9db1d9eeabd30c3475e2738f7e610c07c6fe2efe219a86fa390f95246dcee67" %}
+{% set version = "0.3.1" %}
+{% set sha256 = "b9c5a9b2fb62a615e389036946345ef8a35b09f1ffee541995b16f97fedb3d36" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - tskit=tskit.cli:tskit_main
-  skip: True  # [py<35]
+  skip: true  # [py<35]
 
 # Following the guidance here for building against numpy:
 # https://conda-forge.org/docs/meta.html#building-against-numpy
@@ -48,8 +48,8 @@ about:
   license_file: LICENSE
   summary: The tree sequence toolkit.
   description: Toolkit for storing and processing large-scale genetic genealogies.
-  doc_url: 'http://tskit.readthedocs.io/en/stable'
-  dev_url: 'https://github.com/tskit-dev/tskit'
+  doc_url: http://tskit.readthedocs.io/en/stable
+  dev_url: https://github.com/tskit-dev/tskit
 
 extra:
   recipe-maintainers:
