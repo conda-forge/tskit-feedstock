@@ -1,6 +1,6 @@
 {% set name = "tskit" %}
-{% set version = "0.3.6" %}
-{% set sha256 = "d055749b6ec987543702195e1fa80ba90148855ca02a3d195dd2a80eb85318df" %}
+{% set version = "0.3.7" %}
+{% set sha256 = "78038aa06488ea17939b2a6a0934ce5b92d5ee173f2b4d149981a859f4d89f3b" %}
 
 package:
   name: {{ name|lower }}
