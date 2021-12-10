@@ -1,6 +1,6 @@
 {% set name = "tskit" %}
-{% set version = "0.3.7" %}
-{% set sha256 = "78038aa06488ea17939b2a6a0934ce5b92d5ee173f2b4d149981a859f4d89f3b" %}
+{% set version = "0.4.0" %}
+{% set sha256 = "293d6b3bbd626d6b6f5d5081a5871b31164caea4d636d513df8fa5a71a59596f" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - tskit=tskit.cli:tskit_main
