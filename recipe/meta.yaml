@@ -30,10 +30,6 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
   host:
-    # FIXME this is a workaround for a bug in tskit 0.4.0, which incorrectly
-    # requires setuptools_scm. Remove this for version 0.4.1.
-    # https://github.com/tskit-dev/tskit/issues/2059
-    - setuptools_scm
     - setuptools
     - python
     - pip
@@ -58,7 +54,7 @@ about:
   license_file: LICENSE
   summary: The tree sequence toolkit.
   description: Toolkit for storing and processing large-scale genetic genealogies.
-  doc_url: http://tskit.readthedocs.io/en/stable
+  doc_url: https://tskit.dev/tskit/docs
   dev_url: https://github.com/tskit-dev/tskit
 
 extra:
