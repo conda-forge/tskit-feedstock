@@ -15,7 +15,7 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - tskit=tskit.cli:tskit_main
-  skip: true # [py<39]
+  skip: true  # [py<39]
 
 # Following the guidance here for building against numpy:
 # https://conda-forge.org/docs/meta.html#building-against-numpy
