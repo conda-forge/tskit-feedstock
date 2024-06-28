@@ -15,6 +15,7 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - tskit=tskit.cli:tskit_main
+  skip: true # [py<39]
 
 # Following the guidance here for building against numpy:
 # https://conda-forge.org/docs/meta.html#building-against-numpy
@@ -24,18 +25,18 @@ requirements:
     - {{ stdlib("c") }}
     # Support for osx_arm64 as per
     # https://conda-forge.org/blog/posts/2020-10-29-macos-arm64/#how-to-add-a-osx-arm64-build-to-a-feedstock
-    - python >=3.9                           # [build_platform != target_platform]
+    - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
   host:
     - setuptools
-    - python >=3.9
+    - python
     - pip
     - numpy
   run:
-    - python >=3.9
+    - python
     - svgwrite
     - jsonschema
 
