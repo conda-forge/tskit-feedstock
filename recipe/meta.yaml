@@ -1,13 +1,13 @@
 {% set name = "tskit" %}
-{% set version = "0.6.0" %}
-{% set sha256 = "9dda2acc84ae8dab3484dfedcb721807a4efe48e159f74f24b07789404b54106" %}
+{% set version = "0.6.1" %}
+{% set sha256 = "22bac8dc0431e7799d6eb67da34ccdec2d970d50fc88b80ead60d5f40b74b51d" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -37,7 +37,6 @@ requirements:
     - numpy
   run:
     - python
-    - svgwrite
     - jsonschema
 
 test:
