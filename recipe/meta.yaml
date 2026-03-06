@@ -1,6 +1,6 @@
 {% set name = "tskit" %}
-{% set version = "1.0.1" %}
-{% set sha256 = "2bcf811e420d28a52f4994f72cb3b6900d31865ca0deaefce0aec4ee26021581" %}
+{% set version = "1.0.2" %}
+{% set sha256 = "8713108574f278edc42858e586bd7c131f288689f6283586fdb23f990691dcb3" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - tskit=tskit.cli:tskit_main
-  skip: true  # [py<39]
+  skip: true  # [py<311]
 
 # Following the guidance here for building against numpy:
 # https://conda-forge.org/docs/meta.html#building-against-numpy
